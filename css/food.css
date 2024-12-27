@@ -1,0 +1,183 @@
+/* รีเซตค่าหน้าจอ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS กล่องที่ 1 nav bar โลโก้ เมนู  */
+nav {
+    padding: 1rem;
+    /*ระยะห่างรอบด้าน บน ล่าง ซ้าย ขวา */
+    background-color: #d8700e5a;
+    /* สีพื้นหลังส่วนเมนู */
+}
+
+/* คำสั่ง Container คือการสร้างกล่อง กรอบโครงสร้างกึ่งกลางของหน้าเว็บ */
+.container {
+    max-width: 1150px;
+    /*กำหนดกรอบความกว้างตรงกลาง ตัวเลขน้อยก็บีบเข้า ตัวเลขมากขยายออก*/
+    margin: auto;
+    /* กำหนดขอบดันออกทั้ง 4ด้าน บน ล่าง ซ้าย ขวา ปรับอัตโนมัติ*/
+    /* border: 1px solid red; */
+}
+
+/* กระจายกล่อง โลโก้ และ เมนู */
+.nav-con {
+    display: flex;
+    /* รูปแบบการแสดงผล กล่องโลโก้ และ กล่อง เมนู */
+    justify-content: space-between;
+    /*จัดตำแหน่งแนวนอน แบบกระจายดันออกข้าง */
+}
+
+/* เข้าถึง คำสั่ง Class logo และ a */
+.logo a {
+    /* font-size: 2rem; */
+    font-size: 40px;
+    font-weight: bold;
+    color: #5f0202;
+    /* กำหนดสีอักษร  */
+    text-decoration: none;
+    /* ไม่แสดงเส้นใต้คำสั่งลิงก์ */
+}
+
+/* กำหนด CSS กล่อง เมนู */
+.menu {
+    display: flex;
+    /* กำหนดให้เมนู เรียงเป็นแนวนอน */
+    list-style: none;
+    /* ไม่แสดงจุดสีดำ หน้าสัญลักษณ์เมนู */
+    align-items: center;
+    /* จัดแนวตั้ง เป็น กึ่งกลาง*/
+}
+
+/* ระยะห่างระหว่าง เมนู แต่ละเมนู */
+.menu li {
+    margin: 0 0.5rem;
+    /* กำหนดค่า : ขอบบน-ล่าง เป็น0 และ ซ้าย-ขวา เป็น 1เรม */
+}
+
+/* กำหนดสีและการเส้นใต้ลิงก์ของคำสั่ง a */
+.menu li a {
+    color: #922d2d;
+    text-decoration: none;
+}
+
+
+/* CSS กล่องที่ 2 section  banner  hero */
+
+.hero {
+    background-color: #f8ebb1;
+    /* ใส่สีพื้นหลัง */
+}
+
+.hero-con {
+    /* เข้าถึงการจัดตำแหน่งแสดงรูปภาพ*/
+    display: flex;
+    /* กำหนดข้อความ รูปภาพ แสดงผลแบบ Flex แนวนอน*/
+    /* กระจายออก ซ้าย - ขวา  */
+
+}
+
+.hero-info {
+    width: 100%;
+    padding: 1rem;
+}
+
+.hero-info h3 {
+    font-size: 2rem;
+}
+
+.hero-info p {
+    margin: 1rem 0;
+    /* ปรับทั้ง 4 ด้าน 1rem = บนล่าง  0 = ซ้ายขวา*/
+    text-align: justify;
+    /* กระจายข้อความหน้า-หลัง เท่ากัน */
+
+}
+
+/*กำหนด ปุ่มกด TAG a ที่ต้องเข้าถึง 2 ตัวแปร ใน Class ตามลำดับ */
+.hero-info .hero-btn {
+    /*เข้าถึง Class 2 ตัวแปร ตามลำดับจากบน-ล่าง เสมอ */
+    display: inline-block;
+    background-color: #0120aa;
+    color: #f7f6f6;
+    padding: 1rem;
+    /* กำหนด 4 ด้านเรียงตามนี้ บนล่าง  ซ้ายขวา */
+    font-weight: bold;
+    border-radius: 10px;
+    /* ขอบโค้งของปุ่ม หรือ รูปภาพ*/
+    text-decoration: none; /*ไม่แสดงเส้นใต้สำหรับ ลิงก์*/
+    box-shadow: 1rem 2px 30px rgba(0, 0, 0, .2);
+}
+
+/* กำหนดรูปภาพ อาหาร */
+.hero-img img {
+    width: 80%;
+    padding: 0.5rem;
+    border-radius: 60px;
+
+    /* ใส่เงา พื้นหลัง ขอบ รูปภาพ */
+    box-shadow: 2rem 5px 20px rgba(0, 0, 0, .2);
+}
+
+/* css กล่องที่ 3 คอลัมน์รูปภาพอาหาร */
+.blog-title {
+    margin: 1rem;
+    /*ระยะห่างจากขอบด้าน*/
+    color: #990202;
+    font-size: 18px;
+}
+
+/* จัดการเเสดงผลเเบบคอลัมน์ ด้วย Grid */
+.blog-con {
+    display: grid;
+    /*เเสดงผลเป็นคอลัมน์*/
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* เเบ่งเป็น 4 คอลัมน์*/
+    column-gap: 2rem;
+    /*ระยะห่าง รูปภาพ*/
+}
+
+/* ปรับรุปภาพ เเต่ละอลัมน์ */
+.blog-item img {
+    width: 100%;
+    /*กำหนดความกว้าง สูง เท่าความจริง 100%*/
+    border-radius: 30px;
+    /*ขอบโค้งมน*/
+    border: 5px solid #f5c979;
+    /*ใส่สีเส้นกรอบรุป*/
+    box-shadow: 0 19px 38px black;
+    /*กำหนดเงารูปภาพ*/
+}
+
+.blog-item h4{
+    margin-top: 1rem;/*ห่างจากขอบบน รูปภาพ*/
+    color: #9c0000bd;
+    box-shadow: 0 19px 38px rgb(240, 185, 103);
+}
+
+.blog-item p{
+    margin-top: 1rem; /* ห่างจากขอบบน รูปภาพ*/
+    text-align: justify;/* กระจาย ข้อความ หน้า-หลัง เท่ากัน*/
+}
+
+/*css ปุ่มกด ใต้รูปภาพ*/
+.blog-item .blog-btn{ /*เข้าถึง class 2 ตัวเเปร ตามลำดับจากบน-ล่าง เสมอ*/
+    display: inline-block;
+    background-color: #bb3a35; /*สีพื้นหลัง ปุ่ม*/
+    color: #000; /*สีอักษร ปุ่ม*/
+    padding: 1rem; /*กำหนด 4 ด้านเรียงตามนี้ บลล่าง ว้ายขวา*/
+    font-weight: bold;
+    border-radius: 20px; /*ขอบโค้งของปุ่ม หรือ รุปภาพ*/
+    text-decoration: none; /*ไม่เเสดงเส้นใต้สำหรับ ลิ้งก์*/
+    margin: 1rem 0;
+}
+
+/* css กล่องที่ 5 footer */
+.footer-bottom{
+    background-color: #000;
+    color: #000;
+    padding: 1rem;
+    text-align: center;
+}
